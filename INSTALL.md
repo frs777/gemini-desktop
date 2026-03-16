@@ -1,21 +1,26 @@
-# Instalacja Gemini Desktop
+# Instrukcja Instalacji
 
-Aby zainstalować aplikację Gemini Desktop, wykonaj poniższe kroki:
+## Wymagania systemowe
+- System operacyjny: Windows 10+, macOS 10.14+, lub Linux (Ubuntu 18.04+)
+- RAM: minimum 4 GB
+- Miejsce na dysku: minimum 500 MB
 
-1. **Zainstaluj zależności:**
-   Upewnij się, że masz zainstalowane wszystkie wymagane pakiety.
+## Instalacja na Windows
+1. Pobierz instalator z [oficjalnej strony](https://github.com/frs777/gemini-desktop)
+2. Uruchom plik .exe
+3. Postępuj zgodnie z instrukcjami instalatora
+4. Po zakończeniu kliknij "Uruchom"
 
-2. **Sklonuj repozytorium:**
-   ```bash
-   git clone https://github.com/frs777/gemini-desktop.git
-   cd gemini-desktop
-   ```
+## Instalacja na macOS
+1. Pobierz plik .dmg
+2. Otwórz pobrany plik
+3. Przeciągnij aplikację do folderu Applications
+4. Uruchom aplikację z launchpada
 
-3. **Zbuduj projekt:**
-   Postępuj zgodnie z instrukcjami w pliku `README.md`, aby zbudować projekt.
-
-4. **Uruchom aplikację:**
-   Po zakończeniu budowy uruchom aplikację za pomocą:
+## Instalacja na Linux
+```bash
+sudo apt-get update
+sudo apt-get install gemini-desktop
    ```bash
    ./gemini-desktop
    ```
