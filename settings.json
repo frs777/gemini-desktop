@@ -1,0 +1,133 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "allowedExtensions": [],
+    "disableYoloMode": false,
+    "disableAlwaysAllow": false,
+    "environmentVariableRedaction": {
+      "enabled": true,
+      "blocked": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "GEMINI_API_KEY"
+      ]
+    }
+  },
+  "general": {
+    "vimMode": false,
+    "enableNotifications": true,
+    "defaultApprovalMode": "auto_edit",
+    "evtools": true,
+    "enableAutoUpdate": true,
+    "modelRouting": true,
+    "plan": {
+      "directory": "/home/apawlowski/.gemini-plans/tmp"
+    },
+    "maxAttempts": 10,
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "300d"
+    }
+  },
+  "ui": {
+    "theme": "Default",
+    "errorVerbosity": "full",
+    "autoThemeSwitching": true,
+    "inlineThinkingMode": "full",
+    "hideWindowTitle": false,
+    "showStatusInTitle": true,
+    "showMemoryUsage": true,
+    "loadingPhrases": "all"
+  },
+  "ide": {
+    "hasSeenNudge": true,
+    "enabled": true
+  },
+  "model": {
+    "name": "auto-gemini-2.5"
+  },
+  "context": {
+    "fileName": [
+      "GEMINI.md"
+    ],
+    "includeDirectories": [
+      "/home/apawlowski/projekty"
+    ],
+    "includeDirectoryTree": true
+  },
+  "tools": {
+    "disableLLMCorrection": false,
+    "useRipgrep": true
+  },
+  "agents": {
+    "overrides": {}
+  },
+  "mcpServers": {
+    "fedora-system": {
+      "command": "uv",
+      "args": [
+        "run",
+        "/home/apawlowski/MCP/server.py"
+      ],
+      "description": "Lokalny serwer MCP do zarzadzania plikami i katalogami Fedory",
+      "trust": false
+    },
+    "desktop-commander": {
+      "command": "node",
+      "args": [
+        "/home/apawlowski/DesktopCommanderMCP/dist/index.js"
+      ],
+      "description": "Desktop Commander -- zarzadzanie terminalem, procesami i edycja plikow",
+      "trust": false
+    },
+    "kwin-mcp": {
+      "command": "/home/apawlowski/.local/bin/kwin-mcp",
+      "args": [],
+      "description": "Serwer MCP do sterowania oknami KDE Plasma 6 (Wayland)",
+      "trust": false
+    },
+    "github-mcp-server": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "GitHub MCP -- dostep do repozytoriow, issues i PR przez GitHub API",
+      "trust": false
+    }
+  },
+  "policyPaths": [
+    "/home/apawlowski/.gemini/policies"
+  ],
+  "telemetry": {
+    "enabled": true,
+    "target": "local",
+    "logPrompts": false,
+    "outfile": "/home/apawlowski/konwersacja.html",
+    "useCollector": false
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "experimental": {
+    "plan": true,
+    "modelSteering": true,
+    "directWebFetch": true,
+    "enableAgents": true
+  },
+  "hooks": {
+    "AfterAgent": [
+      {
+        "command": "mkdir -p /home/apawlowski/raporty"
+      }
+    ]
+  }
+}

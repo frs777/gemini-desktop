@@ -18,14 +18,17 @@
 4. Uruchom aplikację z launchpada
 
 ## Instalacja na Linux
-```bash
-sudo apt-get update
-sudo apt-get install gemini-desktop
+1. Zainstaluj pakiet:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gemini-desktop
+   ```
+2. Uruchom aplikację:
    ```bash
    ./gemini-desktop
    ```
 
-5. **Rozwiązywanie problemów:**
-   Jeśli napotkasz jakiekolwiek problemy, sprawdź sekcję rozwiązywania problemów w repozytorium.
+## Rozwiązywanie problemów
+Jeśli napotkasz jakiekolwiek problemy, sprawdź sekcję rozwiązywania problemów w repozytorium.
 
 To wszystko! Teraz powinieneś mieć zainstalowany Gemini Desktop.
