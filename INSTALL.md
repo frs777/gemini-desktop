@@ -1,7 +1,7 @@
 # Instrukcja Instalacji
 
 ## Wymagania systemowe
-- System operacyjny: Windows 10+, macOS 10.14+, lub Linux (Ubuntu 18.04+)
+- System operacyjny: Windows 10+, macOS 10.14+, lub Linux (Fedora 43+)
 - RAM: minimum 4 GB
 - Miejsce na dysku: minimum 500 MB
 
@@ -17,11 +17,10 @@
 3. Przeciągnij aplikację do folderu Applications
 4. Uruchom aplikację z launchpada
 
-## Instalacja na Linux
+## Instalacja na Linux (Fedora)
 1. Zainstaluj pakiet:
    ```bash
-   sudo apt-get update
-   sudo apt-get install gemini-desktop
+   sudo dnf install gemini-desktop
    ```
 2. Uruchom aplikację:
    ```bash
